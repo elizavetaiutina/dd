@@ -5,10 +5,11 @@
   line-height: 1.09;
   letter-spacing: -0.5px;
   color: #151515;
-  max-width: 460px;
+  min-width: 400px;
   margin: 0 0 50px;
-  padding: 0;
+  padding: 0 0 15px;
   text-transform: uppercase;
+  border-bottom: 1px solid #151515;
 }
 
 @media screen and (max-width: 1200px) {

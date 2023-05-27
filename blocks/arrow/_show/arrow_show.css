@@ -1,0 +1,4 @@
+.arrow_show {
+  display: block;
+  transition: display 0.3s ease-in-out;
+}

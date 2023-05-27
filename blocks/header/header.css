@@ -1,5 +1,5 @@
 .header {
-  padding: 28px 120px 28px 0;
+  padding: 28px 120px 28px;
   width: 100%;
   box-sizing: border-box;
   position: sticky;
@@ -9,6 +9,7 @@
   z-index: 1;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   min-height: 74px;
 }
 

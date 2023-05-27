@@ -8,10 +8,10 @@
   color: #151515;
   margin: 0;
   padding: 0;
-  transition: opacity 0.1s ease-in-out;
+  transition: opacity 0.3s ease-in-out;
 }
 
 .header__link:hover {
   opacity: 0.8;
-  text-decoration: underline;
+  color: #e6d15f;
 }

@@ -1,4 +1,4 @@
-import { arrayButtonBuy, popup, formPopup } from "./constants.js";
+import { arrayButtonBuy, popup, formPopup, arrowUp } from "./constants.js";
 
 // Вешаем слушатели на все кнопки "Купить"
 arrayButtonBuy.forEach((btn) =>
@@ -50,3 +50,21 @@ const handleSubmitFormBuy = (form) => {
 
 // Прикрепляем обработчик к форме: он будет следить за событием “submit” - «отправка»
 formPopup.addEventListener("submit", handleSubmitFormBuy);
+
+// Кнопка для возврата наверх страницы
+window.addEventListener("scroll", () => {
+  window.scrollY > 400 ? showArrow() : hideArrow();
+});
+
+// При клике пролистать наверх
+arrowUp.addEventListener("click", () => {
+  window.scrollTo({ p: 0, left: 0, behavior: "smooth" });
+});
+
+function showArrow(event) {
+  arrowUp.classList.add("arrow_show");
+}
+
+function hideArrow(event) {
+  arrowUp.classList.remove("arrow_show");
+}
