@@ -1,0 +1,5 @@
+.form__wrapper_color {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}

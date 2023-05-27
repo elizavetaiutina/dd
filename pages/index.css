@@ -38,3 +38,20 @@
 @import url(../blocks/footer/__nav/footer__nav.css);
 @import url(../blocks/footer/__links/footer__links.css);
 @import url(../blocks/footer/__link/footer__link.css);
+
+/*POP-UP*/
+@import url(../blocks/pop-up/pop-up.css);
+@import url(../blocks/pop-up/__exit/pop-up__exit.css);
+@import url(../blocks/pop-up/_opened/pop-up_opened.css);
+@import url(../blocks/pop-up/_type/pop-up_type_buy.css);
+@import url(../blocks/pop-up/__container/pop-up__container.css);
+@import url(../blocks/pop-up/__title/pop-up__title.css);
+
+/*FORM*/
+@import url(../blocks/form/form.css);
+@import url(../blocks/form/__button-buy/form__button-buy.css);
+@import url(../blocks/form/__input/form__input.css);
+@import url(../blocks/form/__input/_textarea/form__input_textarea.css);
+@import url(../blocks/form/__label/form__label.css);
+@import url(../blocks/form/__wrapper/form__wrapper.css);
+@import url(../blocks/form/__wrapper/_color/form__wrapper_color.css);

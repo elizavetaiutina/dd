@@ -5,9 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Иутина Елизавета</title>
+    <link rel="icon" href="" />
     <link rel="stylesheet" href="./pages/index.css" />
   </head>
-
   <body class="root">
     <div class="page">
       <!--HEADER-->
@@ -798,6 +798,64 @@
           <p class="footer__subtitle">Елизавета Иутина. 2023</p>
         </div>
       </footer>
+      <!---------- POP-UP EDIT PROFILE ---------->
+      <div class="pop-up pop-up_type_buy pop-up_opened">
+        <div class="pop-up__container">
+          <button type="button" aria-label="Закрыть" class="pop-up__exit"></button>
+          <form name="form-buy" class="form">
+            <input
+              type="number"
+              name="number"
+              class="form__input"
+              placeholder="Количество"
+              step="1"
+              min="1"
+              required
+            />
+            <div class="form__wrapper_color">
+              <h3 class="pop-up__title">Цвет:</h3>
+              <div class="form__wrapper">
+                <input
+                  type="radio"
+                  name="color"
+                  id="white"
+                  class="form__radiobutton"
+                  value="white"
+                  checked
+                />
+                <label class="form__label form__label_direction_right" for="white">Белый</label>
+              </div>
+              <div class="form__wrapper">
+                <input
+                  type="radio"
+                  name="color"
+                  id="black"
+                  class="form__radiobutton"
+                  value="black"
+                />
+                <label class="form__label" for="black">Черный</label>
+              </div>
+              <div class="form__wrapper">
+                <input
+                  type="radio"
+                  name="color"
+                  id="yellow"
+                  class="form__radiobutton"
+                  value="yellow"
+                />
+                <label class="form__label" for="yellow">Жёлтый</label>
+              </div>
+            </div>
+            <textarea
+              class="form__input form__input_textarea"
+              placeholder="Комментарий, не более 2000 символов"
+              cols="2000"
+              name="comment"
+            ></textarea>
+            <button type="submit" class="form__button-buy">Купить</button>
+          </form>
+        </div>
+      </div>
     </div>
   </body>
 </html>
