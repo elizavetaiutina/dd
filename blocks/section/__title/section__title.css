@@ -1,0 +1,40 @@
+.section__title {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 1.09;
+  letter-spacing: -0.5px;
+  color: #151515;
+  max-width: 460px;
+  margin: 0 0 50px;
+  padding: 0;
+  text-transform: uppercase;
+}
+
+@media screen and (max-width: 1200px) {
+  .section__title {
+    max-width: 350px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .section__title {
+    font-size: 35px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .section__title {
+    max-width: 732px;
+    font-size: 32px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .section__title {
+    max-width: 284px;
+    line-height: 1.25;
+    margin: 0 0 40px 0;
+    order: -2;
+  }
+}

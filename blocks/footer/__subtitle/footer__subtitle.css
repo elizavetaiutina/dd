@@ -1,0 +1,13 @@
+.footer__subtitle {
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 140%;
+  color: #cfcfcf;
+  margin: 0;
+}
+
+@media screen and (max-width: 768px) {
+  .footer__subtitle {
+    font-weight: 500;
+  }
+}

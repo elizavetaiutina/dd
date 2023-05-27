@@ -1,0 +1,26 @@
+.footer__email {
+  margin: 30px 0 100px;
+  box-sizing: border-box;
+  width: 360px;
+  height: 50px;
+  background-color: #efefef;
+  border: 1px solid rgba(199, 199, 199, 0.5);
+  border-radius: 4px;
+  padding: 11px 20px;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 215%;
+  color: #151515;
+  opacity: 0.7;
+}
+
+.footer__email::placeholder {
+  color: #151515;
+}
+
+@media screen and (max-width: 320px) {
+  .footer__email {
+    min-width: 284px;
+    margin-bottom: 99px;
+  }
+}

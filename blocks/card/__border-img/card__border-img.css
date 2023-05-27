@@ -1,0 +1,14 @@
+.card__border-img {
+  background: #f4f4f4;
+  border-radius: 20px;
+  margin: 0 0 22px;
+  padding: 0 20px 20px;
+  box-shadow: 0px 20px 140px rgba(0, 0, 0, 0.06);
+}
+
+@media screen and (max-width: 768px) {
+  .card__border-img {
+    margin: 0;
+    padding: 0 14px 16px;
+  }
+}

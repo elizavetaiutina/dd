@@ -1,0 +1,8 @@
+.section__item {
+  margin: 0;
+  padding: 0;
+}
+
+.section__item:last-child {
+  align-self: start;
+}
