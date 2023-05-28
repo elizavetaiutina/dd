@@ -5,12 +5,8 @@
   object-fit: cover;
 }
 
-@media screen and (max-width: 1439px) {
+@media screen and (max-width: 400px) {
   .card__img {
-  }
-}
-
-@media screen and (max-width: 320px) {
-  .card__img {
+    max-width: 200px;
   }
 }

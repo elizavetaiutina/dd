@@ -12,11 +12,20 @@
   flex-direction: row;
   justify-content: space-between;
   gap: 30px;
+  max-width: 700px;
 }
 
-@media screen and (min-width: 466px) {
+@media screen and (max-width: 800px) {
   .pop-up__container {
     padding: 60px 36px 37px;
-    max-width: 700px;
+    max-width: 400px;
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .pop-up__container {
+    padding: 30px 18px;
+    max-width: 400px;
   }
 }
