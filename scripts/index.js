@@ -1,15 +1,25 @@
-import { arrayButtonBuy, popup, formPopup, arrowUp } from "./constants.js";
+import { arrayCard, popup, fotoPopup, namePopup, formPopup, arrowUp } from "./constants.js";
 
-// Вешаем слушатели на все кнопки "Купить"
-arrayButtonBuy.forEach((btn) =>
-  btn.addEventListener("click", () => {
-    openPopup(popup);
-  })
-);
+// ----------------- POPUP покупки -------------------
+// На каждую карту вешаем слушатель открытия попапа по кнопке купить
+arrayCard.forEach((card) => {
+  const imageCard = card.querySelector(".card__img");
+  const titleCard = card.querySelector(".card__name");
+  const link = imageCard.src;
+  const name = titleCard.textContent;
+  const buttonBuy = card.querySelector(".card__button");
+
+  buttonBuy.addEventListener("click", () => {
+    openPopup(link, name);
+  });
+});
 
 // Функция открытия поп-апа
-function openPopup(popup) {
+function openPopup(link, name) {
   console.log("открыть");
+  fotoPopup.src = link;
+  fotoPopup.alt = name;
+  namePopup.textContent = name;
   popup.classList.add("pop-up_opened");
   popup.addEventListener("click", handleClosePopup);
   document.addEventListener("keydown", handleClosePopupEscape);
@@ -51,7 +61,7 @@ const handleSubmitFormBuy = (form) => {
 // Прикрепляем обработчик к форме: он будет следить за событием “submit” - «отправка»
 formPopup.addEventListener("submit", handleSubmitFormBuy);
 
-// Кнопка для возврата наверх страницы
+// ----------------- Кнопка для возврата наверх страницы ----------
 window.addEventListener("scroll", () => {
   window.scrollY > 400 ? showArrow() : hideArrow();
 });

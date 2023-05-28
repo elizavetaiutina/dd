@@ -49,6 +49,9 @@
 @import url(../blocks/pop-up/_type/pop-up_type_buy.css);
 @import url(../blocks/pop-up/__container/pop-up__container.css);
 @import url(../blocks/pop-up/__title/pop-up__title.css);
+@import url(../blocks/pop-up/__image/pop-up__image.css);
+@import url(../blocks/pop-up/__name/pop-up__name.css);
+@import url(../blocks/pop-up/__item/pop-up__item.css);
 
 /*FORM*/
 @import url(../blocks/form/form.css);

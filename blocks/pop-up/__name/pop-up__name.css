@@ -1,0 +1,10 @@
+.pop-up__name {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 26px;
+  line-height: 24px;
+  color: #151515;
+  text-transform: uppercase;
+  margin: 0;
+  padding: 0;
+}
