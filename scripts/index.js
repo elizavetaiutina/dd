@@ -1,38 +1,85 @@
 import {
-  arrayCard,
   popup,
-  fotoPopup,
+  imgPopup,
   namePopup,
   formPopup,
   arrowUp,
   page,
   header,
-  cards,
   footer,
   sectionsTitle,
   popupContainer,
   links,
+  daysWeek,
+  months,
 } from "./constants.js";
+import {
+  arrayCardTshirt,
+  arrayCardSweatshirt,
+  arrayCardCap,
+  arrayCardSneakers,
+} from "./arrayCard.js";
 
-// ----------------- POPUP покупки -------------------
-// На каждую карту вешаем слушатель открытия попапа по кнопке купить
-arrayCard.forEach((card) => {
-  const imageCard = card.querySelector(".card__img");
-  const titleCard = card.querySelector(".card__name");
-  const link = imageCard.src;
-  const name = titleCard.textContent;
-  const buttonBuy = card.querySelector(".card__button");
+// ----------------- СОЗДАНИЕ КАРТОЧКИ (template) -------------------
+//Шаблон template для карт
+const cardTemplate = document.querySelector(".card-template").content;
+const cardContainerTshirt = document.querySelector(".section__list_tshirt");
+const cardContainerSweatshirt = document.querySelector(".section__list_sweatshirt");
+const cardContainerCap = document.querySelector(".section__list_cap");
+const cardContainerSneakers = document.querySelector(".section__list_sneakers");
+
+function generateCard(item) {
+  const newCard = cardTemplate.cloneNode(true);
+
+  const nameCard = newCard.querySelector(".card__name");
+  nameCard.textContent = item.name;
+
+  const cardDate = newCard.querySelector(".card__date");
+  cardDate.textContent = getDayInfo(item.date);
+
+  const imageCard = newCard.querySelector(".card__img");
+  imageCard.src = item.link;
+  imageCard.alt = item.name;
+
+  // На каждую карту вешаем слушатель открытия попапа по кнопке купить
+  const buttonBuy = newCard.querySelector(".card__button");
 
   buttonBuy.addEventListener("click", () => {
-    openPopup(link, name);
+    openPopup(item.link, item.name);
   });
-});
 
+  return newCard;
+}
+
+// Проходим по массиву и создаем для каждого элемента добавление карточки
+function renderCard(item, containerCards) {
+  containerCards.prepend(generateCard(item));
+}
+arrayCardTshirt.forEach((array) => renderCard(array, cardContainerTshirt));
+arrayCardSweatshirt.forEach((array) => renderCard(array, cardContainerSweatshirt));
+arrayCardCap.forEach((array) => renderCard(array, cardContainerCap));
+arrayCardSneakers.forEach((array) => renderCard(array, cardContainerSneakers));
+
+// дата добавления товара
+function getDayInfo(date) {
+  const arrayDate = date.split(".");
+  const dateFull = new Date(arrayDate[2], arrayDate[1] - 1, arrayDate[0]);
+  /*console.log(dateFull);*/
+  const day = dateFull.getDate();
+  const dayWeek = daysWeek[dateFull.getDay()];
+  const month = months[dateFull.getMonth()];
+  const year = dateFull.getFullYear();
+  const numberWeek = Math.ceil((day + 6 - dateFull.getDay()) / 7);
+
+  return `${dayWeek}, ${numberWeek} неделя ${month} ${year} года`;
+}
+
+// ----------------- POPUP покупки -------------------
 // Функция открытия поп-апа
 function openPopup(link, name) {
   console.log("открыть");
-  fotoPopup.src = link;
-  fotoPopup.alt = name;
+  imgPopup.src = link;
+  imgPopup.alt = name;
   namePopup.textContent = name;
   popup.classList.add("pop-up_opened");
   popup.addEventListener("click", handleClosePopup);
@@ -93,11 +140,11 @@ function hideArrow(event) {
   arrowUp.classList.remove("arrow_show");
 }
 
-// ----------------- Смена темы ----------
+const cards = document.querySelectorAll(".card");
+
+// ----------------- СМЕНА ТЕМЫ ----------
 const buttonThemeChange = document.querySelector(".theme");
-console.log(sectionsTitle);
 buttonThemeChange.addEventListener("click", () => {
-  console.log("dddd");
   page.classList.toggle("theme_dark");
   header.classList.toggle("theme_dark");
   cards.forEach((card) => card.classList.toggle("theme_dark"));
