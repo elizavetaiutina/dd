@@ -4,7 +4,8 @@
   box-sizing: border-box;
   margin: 0 auto;
   padding: 0;
-  background-color: #f4f4f4;
+  background-color: #f7f7f7;
+  color: #151515;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   -webkit-text-size-adjust: 100%;
@@ -12,4 +13,8 @@
   -moz-text-size-adjust: 100%;
   text-rendering: optimizeLegibility;
   scroll-behavior: "smooth";
+}
+
+a {
+  color: #151515;
 }

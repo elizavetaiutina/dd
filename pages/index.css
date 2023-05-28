@@ -14,7 +14,6 @@
 @import url(../blocks/header/__links/header__links.css);
 @import url(../blocks/header/__nav/header__nav.css);
 @import url(../blocks/theme/theme.css);
-@import url(../blocks/theme/__color/theme__color.css);
 
 /*SECTION*/
 @import url(../blocks/section/section.css);
@@ -61,3 +60,6 @@
 @import url(../blocks/form/__label/form__label.css);
 @import url(../blocks/form/__wrapper/form__wrapper.css);
 @import url(../blocks/form/__wrapper/_color/form__wrapper_color.css);
+
+/*ТЕМНАЯ ТЕМА */
+@import url(../blocks/theme/__dark/theme__dark.css);

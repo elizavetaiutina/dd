@@ -1,4 +1,18 @@
-import { arrayCard, popup, fotoPopup, namePopup, formPopup, arrowUp } from "./constants.js";
+import {
+  arrayCard,
+  popup,
+  fotoPopup,
+  namePopup,
+  formPopup,
+  arrowUp,
+  page,
+  header,
+  cards,
+  footer,
+  sectionsTitle,
+  popupContainer,
+  links,
+} from "./constants.js";
 
 // ----------------- POPUP покупки -------------------
 // На каждую карту вешаем слушатель открытия попапа по кнопке купить
@@ -78,3 +92,19 @@ function showArrow(event) {
 function hideArrow(event) {
   arrowUp.classList.remove("arrow_show");
 }
+
+// ----------------- Смена темы ----------
+const buttonThemeChange = document.querySelector(".theme");
+console.log(sectionsTitle);
+buttonThemeChange.addEventListener("click", () => {
+  console.log("dddd");
+  page.classList.toggle("theme_dark");
+  header.classList.toggle("theme_dark");
+  cards.forEach((card) => card.classList.toggle("theme_dark"));
+  footer.classList.toggle("theme_dark");
+  sectionsTitle.forEach((i) => i.classList.toggle("theme_dark"));
+  popupContainer.classList.toggle("theme_dark");
+  for (let link of links) {
+    link.classList.toggle("theme_dark");
+  }
+});

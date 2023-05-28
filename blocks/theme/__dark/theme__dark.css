@@ -1,0 +1,37 @@
+a.theme_dark {
+  color: #f7f7f7;
+}
+
+.header.theme_dark {
+  background-color: #111111;
+}
+
+.footer.theme_dark {
+  background-color: #111;
+}
+
+.section.theme_dark {
+  background-color: #151515;
+}
+
+.section__title.theme_dark {
+  border-bottom: 1px solid #f7f7f7;
+}
+
+.pop-up__container.theme_dark {
+  background: linear-gradient(180deg, #daa003 0%, #d49007 100%);
+}
+.page.theme_dark {
+  background-color: #151515;
+  color: #f7f7f7;
+}
+.card.theme_dark {
+  background-color: #1f1e1e;
+}
+.card.theme_dark:hover {
+  box-shadow: 0px 20px 50px rgba(150, 112, 30, 0.342);
+}
+.header__link.theme_dark:hover {
+  opacity: 0.8;
+  color: #e6d15f;
+}

@@ -1,8 +1,14 @@
 .theme {
-  list-style: none;
   margin: 0;
   padding: 0;
-  display: flex;
-  gap: 34px;
-  justify-content: end;
+  transition: opacity 0.1s ease-in-out;
+  width: 50px;
+  background-color: transparent;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.theme:hover {
+  opacity: 0.8;
+  box-shadow: 0px 5px 10px rgba(180, 180, 180, 0.26), 0px 20px 40px rgba(146, 145, 144, 0.29);
 }
